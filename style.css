@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: "Quicksand", sans-serif; */
+    /* font-weight: 700; */
+    /* color: white; */
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+body header nav #nav {
+    background-color: white;
+    color: black;
+    height: 60px;
+    padding: 15px 15px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+    flex-wrap: nowrap;
+}
+
+body header nav #nav img {
+    height: 60px;
+    width: 150px;
+    padding: 10px;
+}
+
+.main-content {
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 70px;
+    /* display: block; */
+    width: 100%;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.493);
+    z-index: 1;
+}
+
+.main-content .banner {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    height: 500px;
+}
+
+.main-content .banner .left-section,
+.main-content .banner .right-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.main-content .banner .left-section{
+   width: 50vw;
+}
+
+.main-content .banner .right-section{
+   width: 50vw;
+}
+
+.main-content .banner .left-section img {
+    width: 300px;
+}
+
+.main-content .banner .right-section img {
+    height: 450px;
+    background-size: cover;
+}
+
+.main-content .banner .left-section p {
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    margin: 10px;
+}
+
+.main-content .banner .left-section {
+    padding: 0px 50px;
+}
+
+.main-content .banner .left-section #Cap {
+    font-size: 30px; 
+    line-height: 47px;
+    font-family: "Playfair Display", serif;
+    font-weight: 900;
+    font-style: normal;
+    display: inline-block;
+    text-shadow: 2px 2px 5px #333333;
+}
+
+.main-content .banner .left-section #Low {
+    font-size: 12px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+        /* Vertical layout for smaller screens */
+        align-items: center;
+        /* Center items horizontally */
+        text-align: center;
+        /* Center text content */
+    }
+
+    .left-section {
+        order: 1;
+        /* Move left section below right section */
+        margin-top: 20px;
+        /* Add some space between sections */
+    }
+
+    .right-section {
+        order: 2;
+        /* Move right section above left section */
+    }
+
+    .main-content .banner .left-section img {
+        width: 45vw;
+    }
+
+    .main-content .banner .right-section img {
+        width: 70vw;
+    }
+}
+
+.icon-section {
+    width: 100%;
+    height: 120px;
+    background-color: #424242;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.icon-section .icon {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.icon-section .icon img{
+    height: 70px;
+}
+
+.icon-section p {
+    color: white;
+    text-align: center;
+    margin-top: 2px;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.video-section {
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    background-color: white;
+    height: 350px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .video-section {
+        flex-direction: column;
+        /* Vertical layout for smaller screens */
+        /* align-items: center; */
+    }
+
+    .video-section .video {
+        align-items: center;
+    }
+
+    .video-section .video-info {
+        align-items: flex-start;
+    }
+
+    .video-section .video,
+    .video-section .video-info {
+        width: 100%;
+        /* Full width for both video and info */
+    }
+
+    .video-section .video {
+        margin-bottom: 20px;
+        /* Add some space between video and text */
+    }
+}
+
+
+.video-section .video {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.video-section .video-info {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    /* padding: 0px 30px; */
+}
+
+.video-section .video-info h1 {
+    font-size: 50px;
+    text-align: left;
+}
+
+.video-section .video-info h2 {
+    font-size: 30px;
+    text-align: left;
+}
+
+.video-section .video-info p {
+    text-align: left;
+    font-size: 20px
+}
+
+.video-section .video-info p span {
+    color: #fa890f;
+}
+
+.video-section .video {
+    width: 50%;
+    height: 90%;
+    /* Adjust width as needed */
+}
+
+.video-section .video-info {
+    width: 50%;
+    /* Adjust width as needed */
+}
+
+.video-section h2 {
+    margin-bottom: 10px;
+}
+
+/* Two Boxes Section Styles */
+.box-section {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    align-items: center;
+    padding: 20px 0;
+    height: 400px;
+    background: url(backgroundSecond.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.box-section #box1 {
+    width: 40%;
+    height: 350px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.box-section #box1 #buttons {
+    gap: 10px;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.box-section #box1 #buttons button {
+    width: 35px;
+    height: 18px;
+    padding: 0px 5px;
+    background-color: gray;
+    color: white;
+    border: none;
+    outline: none;
+}
+
+.box-section #box1 #buttons button:hover {
+    background-color: #fa890f;
+}
+
+.box-section #box2 {
+    width: 25%;
+    height: 370px;
+    background-color: white;
+}
+
+.box-section #box2 #content span {
+    text-transform: uppercase;
+    text-align: end;
+    justify-content: flex-end;
+}
+
+.box-section #box2 #content {
+    display: flex;
+    flex-direction: column;
+}
+
+.box-section #box2 #content table tr .end {
+    background-color: rgb(0, 125, 167);
+    line-height: 0;
+    font-size: 13px;
+    margin-left: auto;
+    text-align: center;
+    font-family: "Lato", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    color: #fff;
+    padding: 0px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.box-section #box2 #content table .space{
+    border-top: 1px dotted black;
+}
+
+.value {
+    margin-left: auto;
+}
+
+.box-section #box2 #content table tr td {
+    /* border-bottom: 1px dotted black; */
+    padding: 10px;
+}
+
+.box-section #box2 #content {
+    margin-top: 10px;
+}
+
+.main-content .footer #heading h4 {
+    color: white;
+    font-weight: 100;
+    font-size: 15px;
+    margin-left: 80px;
+}
+
+.main-content .footer #heading {
+    padding: 10px 30px;
+    background-color: #424242;
+    /* margin-left: 80px; */
+}
+
+.main-content .video-section .video-info h2 {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(51, 51, 51);
+}
+
+.main-content .video-section .video-info h1 {
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: rgb(51, 51, 51);
+}
+
+.main-content .video-section .video-info p {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: rgb(51, 51, 51);
+}
+
+.main-content #box1 #heading h2{
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: rgb(51, 51, 51);
+}
+
+.main-content #box2 #heading h2{
+    font-family: "Playfair Display", serif;
+    font-weight: 500;
+    font-style: normal;
+    color: rgb(250, 137, 15);
+}
+
+.main-content #box2 #content table tr{
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: rgb(51, 51, 51);
+}
+
+.main-content .box-section #box2{
+    padding: 10px;
+}
+
+.main-content #box2 #content p{
+    font-family: "Lato", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    border-top: 1px dotted black;
+    padding: 2px;
+}
